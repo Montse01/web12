@@ -1,0 +1,28 @@
+$def with(posts)
+
+       <h1>Listado de Productos</h1>
+<table border="2">
+       <th>Productos</th>
+       
+       <th>Modificar</th>
+
+       <th>Borrar</th>
+
+
+          $for post in posts:
+
+            <tr>
+            	<td><a href='/view/$post.id_producto'>$post.producto</td>
+            	
+            	<!--from $datestr(post.posted_on)-->
+            	<td><a href="/edit/$post.id_producto">Edit</td>
+                           <td> <a href="/edit/$post.id_producto" >Borrar</td>
+
+            
+        </a></td>
+       </tr>
+          
+  </table>
+ 
+       
+  

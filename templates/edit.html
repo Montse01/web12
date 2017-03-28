@@ -1,0 +1,14 @@
+$def with (post, form)
+
+<h1>Quiere editar este producto: $form.d.producto</h1>
+
+<form action="" method="post">
+$:form.render()
+</form>
+
+
+
+<h2>Eliminar este producto</h2>
+<form action="/delete/$post.id_producto" method="post">
+    <input type="submit"  onclick="return confirm('seguro que desea borrar este producto?')" value="Borrar" />
+</form>
